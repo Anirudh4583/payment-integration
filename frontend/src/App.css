@@ -1,0 +1,58 @@
+* {
+  box-sizing: border-box;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 100px;
+  margin: auto;
+}
+
+.App input {
+  width: 150px;
+  height: 30px;
+  border-radius: 6px;
+  border: 1.7px solid black;
+  margin: 20px;
+  padding-left: 28px;
+  background-color: #e4e4e4;
+  transition: all 0.5s ease-in;
+}
+
+.App input:focus {
+  outline: none;
+  background-color: transparent;
+}
+
+.icon {
+  position: absolute;
+  width: 27px;
+  top: 206px;
+  left: 694px;
+}
+
+.App button {
+  font-size: 16px;
+  width: 100px;
+  background-color: #a54dec;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1), 0 6px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  color: #fff;
+  cursor: pointer;
+  transition: all 100ms ease-in-out;
+  border: none;
+  padding: 4px;
+  margin: 15px;
+}
+
+.App button:active {
+  transform: scale(0.95);
+}
+
+.App h1,
+.App h3 {
+  text-align: center;
+}

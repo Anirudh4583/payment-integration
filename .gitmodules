@@ -1,0 +1,3 @@
+[submodule "pay-int-backend"]
+	path = pay-int-backend
+	url = https://github.com/Anirudh4583/pay-int-backend
