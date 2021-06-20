@@ -1,5 +1,5 @@
 import { makeStyles, Modal } from '@material-ui/core';
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import Button from '@material-ui/core/Button';
 import PaymentIcon from '@material-ui/icons/Payment';
 import AttachMoneyIcon from '@material-ui/icons/AttachMoney';
@@ -68,7 +68,7 @@ function Donate() {
 
     if (!res) {
       alert('Error!');
-      console.log('razorpay sdk failed to load');
+      console.log('razorpay sdk script load fail');
     }
 
     const data = await fetch('https://pay-int.herokuapp.com/pay', {
@@ -92,9 +92,10 @@ function Donate() {
       description: 'Test Transaction',
       image: 'https://pay-int.herokuapp.com/logo.png',
       handler: function (response) {
-        alert(response.razorpay_payment_id);
-        alert(response.razorpay_order_id);
-        alert(response.razorpay_signature);
+        alert('payment successful');
+        console.log(response.razorpay_payment_id);
+        console.log(response.razorpay_order_id);
+        console.log(response.razorpay_signature);
       },
       theme: {
         color: '#3399cc',
